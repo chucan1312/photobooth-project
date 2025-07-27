@@ -1,9 +1,9 @@
 const video = document.getElementById('camera');
 const canvas = document.getElementById('snapshot');
 const context = canvas.getContext('2d');
+const container = document.getElementById('photo-container');
 
 let count = 0;
-const container = document.getElementById('photo-container');
 const maxPhotos = parseInt(container.dataset.max, 10);
 
 navigator.mediaDevices.getUserMedia({ video:true })
@@ -17,16 +17,38 @@ navigator.mediaDevices.getUserMedia({ video:true })
 });
 
 function takePhoto() {
-    if (count >= maxPhotos) window.location.href = "/deco";
+    if (count >= maxPhotos) {
+        if (maxPhotos === 8) window.location.href = "/choose4cuts";
+        else window.location.href = "/choose6cuts";
+    } 
     
     setTimeout(() => {
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        console.log("Photo taken for debug");
-        
-        const imageData = canvas.toDataURL("image/png");
-        console.log(imageData);
+        canvas.width = 680;
+        canvas.height = 460;
 
-        count++;
-        takePhoto();
-    }, 8000);    
+        context.save();
+        context.scale(-1, 1);
+        context.drawImage(video, -canvas.width, 0, canvas.width, canvas.height);
+        context.restore();
+
+        // Conver to base64 PNG
+        const imageData = canvas.toDataURL("image/png");
+        
+        // Send to backend via fetch
+        fetch('/save-photo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                image: imageData,
+                filename: `photo_${count + 1}.png`
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            count++;
+            takePhoto();
+        })
+    }, 10000);    
 }
