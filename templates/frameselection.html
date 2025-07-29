@@ -3,11 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <title>SelectFrame</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    
     </head>
     <body>
-        <h1>Select your frame</h1>
-        <button class="frame-button" onclick="window.location.href='/photobooth?max=8'">4-cuts</button>
-        <button class="frame-button" onclick="window.location.href='/photobooth?max=10'">6-cuts</button>
+        <div class="content">
+            <h1>Select your frame</h1>
+            <button class="frame-button" onclick="window.location.href='/photobooth?max=8'">4-cuts</button>
+            <button class="frame-button" onclick="window.location.href='/photobooth?max=10'">6-cuts</button>
+        </div>
     </body>
+    <footer>
+        <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.
+            <a href="https://github.com/chucan1312/photobooth-project" target="_blank">View on Github</a>
+        </p>
+    </footer>
 </html>

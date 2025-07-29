@@ -3,10 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <title>Home</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/style.css">
     </head>
     <body>
-        <h1>Photobooth App</h1>
-        <button class="home-button" onclick="window.location.href='/frameselection'">Start</button>
+        <div class = "content__home">
+            <p class="home-page-title">Photobooth App</p>
+            <div class="button-containter">
+                <button onclick="window.location.href='/frameselection'">Start</button>
+                <button onclick="window.location.href='/instruction'">Instruction</button>
+            </div>
+        </div>
     </body>
+    <footer>
+        <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.
+            <a href="https://github.com/chucan1312/photobooth-project" target="_blank">View on Github</a>
+        </p>
+    </footer>
 </html>

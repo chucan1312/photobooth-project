@@ -47,5 +47,9 @@ def deco4():
 def deco6():
     return render_template('deco6cuts.html')
 
+@app.route('/nstruction')
+def instruction():
+    return render_template('instruction.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

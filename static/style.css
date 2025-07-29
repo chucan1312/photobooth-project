@@ -3,3 +3,70 @@ video {
     height: 460px;
     transform: scaleX(-1);
 }
+
+h1 {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #526056;
+}
+
+.home-page-title {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: 95px;
+    color: #526056;
+}
+
+button {
+    background-color: #526056;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+    padding: 14px 14px;
+    font-family: "Playfair Display", serif;
+    font-size:28px;
+    width: auto;
+    height: auto; 
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #2d322f;
+}
+.button-containter {
+    text-align: center;
+    margin-top: -25px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    background-color: #aac0b0
+}
+
+.content__home {
+    flex: 1;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background-color:#526056;
+    color: #ffffff;
+    text-align: center;
+}
