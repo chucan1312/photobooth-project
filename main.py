@@ -47,7 +47,7 @@ def deco4():
 def deco6():
     return render_template('deco6cuts.html')
 
-@app.route('/nstruction')
+@app.route('/instruction')
 def instruction():
     return render_template('instruction.html')
 

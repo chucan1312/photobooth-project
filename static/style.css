@@ -26,9 +26,9 @@ button {
     color: #ffffff;
     border: none;
     text-align: center;
-    padding: 14px 14px;
+    padding: 13px 13px;
     font-family: "Playfair Display", serif;
-    font-size:28px;
+    font-size:25px;
     width: auto;
     height: auto; 
     border-radius: 10px;
@@ -37,9 +37,29 @@ button {
 button:hover {
     background-color: #2d322f;
 }
+
+.frame-button {
+    background-color: transparent;
+    width: auto;
+    height: auto;
+}
+
+.frame-img {
+    transition: transform 0.1s ease;
+}
+
+.frame-button:hover {
+    background-color: transparent;
+}
+
+.frame-button:hover .frame-img {
+    transform: scale(1.2);
+}
+
 .button-containter {
     text-align: center;
-    margin-top: -25px;
+    margin-top: -30px;
+    padding-bottom: 40px;
 }
 
 html, body {
@@ -59,7 +79,7 @@ body {
 
 .content__home {
     flex: 1;
-    background-image: url('background.jpg');
+    background-image: url('/static/deco/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
