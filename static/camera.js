@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector('.video-wrapper')
     const video = document.getElementById('camera');
     const canvas = document.getElementById('snapshot');
     const context = canvas.getContext('2d');
@@ -6,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let count = 0;
     const maxPhotos = parseInt(container.dataset.max, 10);
+
+    if (maxPhotos === 10) {
+        wrapper.classList.add('video-wrapper-6')
+        video.classList.add('resizable-video-6')
+    }
 
     navigator.mediaDevices.getUserMedia({ video:true })
     .then(stream=> {    
@@ -24,13 +30,29 @@ document.addEventListener("DOMContentLoaded", () => {
         } 
     
         setTimeout(() => {
-            canvas.width = 680;
-            canvas.height = 460;
-
-            context.save();
-            context.scale(-1, 1);
-            context.drawImage(video, -canvas.width, 0, canvas.width, canvas.height);
-            context.restore();
+            if (maxPhotos === 8) {
+                canvas.width = 774;
+                canvas.height = 612;
+                const cropX = (video.width - canvas.width) / 2;
+                const cropY = (video.height - canvas.height) / 2;
+                context.save();
+                context.drawImage(video, cropX, cropY, canvas.width, canvas.height,
+                    0, 0, canvas.width, canvas.height
+                );
+                context.scale(-1, 1);
+                context.restore();
+            } else {
+                canvas.width = 675;
+                canvas.height = 630;
+                const cropX = (video.width - canvas.width) / 2;
+                const cropY = (video.height - canvas.height) / 2;
+                context.save();
+                context.drawImage(video, cropX, cropY, canvas.width, canvas.height,
+                    0, 0, canvas.width, canvas.height
+                );
+                context.scale(-1, 1);
+                context.restore();
+            }
 
             // Conver to base64 PNG
             const imageData = canvas.toDataURL("image/png");

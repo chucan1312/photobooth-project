@@ -6,8 +6,10 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <div class="content">
-            <video id="camera" autoplay playsinline></video>
+        <div class="content content-photobooth">
+            <div class="video-wrapper">
+                <video class="resizable-video" id="camera" autoplay playsinline></video>
+            </div>
             <canvas id="snapshot" style="display: none;"> </canvas>
             <div id="timer">10</div>
             <div id="photo-container" data-max="{{ max }}"></div>
@@ -15,4 +17,9 @@
         <script src="/static/camera.js"></script>
         <script src="/static/timer.js"></script>
     </body>
+    <footer>
+        <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.
+            <a href="https://github.com/chucan1312/photobooth-project" target="_blank">View on Github</a>
+        </p>
+    </footer>
 </html>
