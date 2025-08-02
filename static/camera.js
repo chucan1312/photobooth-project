@@ -7,13 +7,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let count = 0;
     const maxPhotos = parseInt(container.dataset.max, 10);
-
+    let width = 900;
+    let height = 612;
     if (maxPhotos === 10) {
         wrapper.classList.add('video-wrapper-6')
         video.classList.add('resizable-video-6')
+        width = 899;
+        height = 630;
     }
 
-    navigator.mediaDevices.getUserMedia({ video:true })
+    navigator.mediaDevices.getUserMedia({ 
+        video: {
+            width: {ideal: width},
+            height: { ideal: height},
+            facingMode: "user"
+        } 
+    })
     .then(stream=> {    
         video.srcObject = stream; 
         video.play();
@@ -33,24 +42,24 @@ document.addEventListener("DOMContentLoaded", () => {
             if (maxPhotos === 8) {
                 canvas.width = 774;
                 canvas.height = 612;
-                const cropX = (video.width - canvas.width) / 2;
-                const cropY = (video.height - canvas.height) / 2;
+                const cropX = (video.videoWidth - canvas.width) / 2;
+                const cropY = (video.videoHeight - canvas.height) / 2;
                 context.save();
-                context.drawImage(video, cropX, cropY, canvas.width, canvas.height,
-                    0, 0, canvas.width, canvas.height
-                );
                 context.scale(-1, 1);
+                context.drawImage(video, cropX, 0, canvas.width, canvas.height,
+                    -canvas.width, 0, canvas.width, canvas.height
+                );
                 context.restore();
             } else {
                 canvas.width = 675;
                 canvas.height = 630;
-                const cropX = (video.width - canvas.width) / 2;
-                const cropY = (video.height - canvas.height) / 2;
+                const cropX = (video.videoWidth - canvas.width) / 2;
+                const cropY = (video.videoHeight - canvas.height) / 2;
                 context.save();
-                context.drawImage(video, cropX, cropY, canvas.width, canvas.height,
-                    0, 0, canvas.width, canvas.height
-                );
                 context.scale(-1, 1);
+                context.drawImage(video, cropX, 0, canvas.width, canvas.height,
+                    -canvas.width, 0, canvas.width, canvas.height
+                );
                 context.restore();
             }
 
