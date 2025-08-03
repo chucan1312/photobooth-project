@@ -33,11 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function takePhoto() {
+        flash();
+        
         if (count >= maxPhotos) {
             if (maxPhotos === 8) window.location.href = "/choose4cuts";
             else window.location.href = "/choose6cuts";
         } 
-    
+
         setTimeout(() => {
             if (maxPhotos === 8) {
                 canvas.width = 774;
@@ -83,5 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 takePhoto();
             })
         }, 11000);    
+    }
+
+    function flash() {
+        const flash = document.getElementById('flash');
+        flash.style.opacity = '1';
+        setTimeout(() => {
+            flash.style.opacity = '0';
+        }, 100);
     }
 })

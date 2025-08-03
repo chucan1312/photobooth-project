@@ -14,5 +14,5 @@ window.addEventListener("DOMContentLoaded", () => {
         setTimeout(updateCount, 11000);
     }
 
-    setTimeout(updateCount, 1000);
+    setTimeout(updateCount, 3000);
 });
