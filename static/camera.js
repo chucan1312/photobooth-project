@@ -82,6 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 count++;
                 takePhoto();
             })
-        }, 10000);    
+        }, 11000);    
     }
 })

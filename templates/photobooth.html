@@ -6,16 +6,18 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
+        <div id="photo-container" data-max="{{ max }}"></div>
         <div class="content content-photobooth">
+            <div id="count">0/!</div>
             <div class="video-wrapper">
                 <video class="resizable-video" id="camera" autoplay playsinline></video>
             </div>
-            <canvas id="snapshot" style="display: none;"> </canvas>
-            <div id="timer">10</div>
-            <div id="photo-container" data-max="{{ max }}"></div>
+            <canvas id="snapshot" style="display: none;"></canvas>
+            <div id="timer">11</div>
         </div>
         <script src="/static/camera.js"></script>
         <script src="/static/timer.js"></script>
+        <script src="/static/photocount.js"></script>
     </body>
     <footer>
         <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.
