@@ -59,10 +59,8 @@ addEventPic(pic5, 4, "/static/temp-photos/photo_5.png");
 addEventPic(pic6, 5, "/static/temp-photos/photo_6.png");
 addEventPic(pic7, 6, "/static/temp-photos/photo_7.png");
 addEventPic(pic8, 7, "/static/temp-photos/photo_8.png");
-if (pic9) {
+if (pic9 && pic10) {
     addEventPic(pic9, 8, "/static/temp-photos/photo_9.png");
-}
-if (pic10) {
     addEventPic(pic10, 9, "/static/temp-photos/photo_10.png");
 }
 
@@ -88,9 +86,17 @@ function addEventSelect(selected, num, white) {
     })
 }
 
-addEventSelect(selected1, 0, "/static/white/4cuts.png");
-addEventSelect(selected2, 1, "/static/white/4cuts.png");
-addEventSelect(selected3, 2, "/static/white/4cuts.png");
-addEventSelect(selected4, 3, "/static/white/4cuts.png");
-addEventSelect(selected5, 4, "/static/white/4cuts.png");
-addEventSelect(selected6, 5, "/static/white/4cuts.png");
+if (pic9 && pic10) {
+    addEventSelect(selected1, 0, "/static/deco/green6cuts.png");
+    addEventSelect(selected2, 1, "/static/deco/green6cuts.png");
+    addEventSelect(selected3, 2, "/static/deco/green6cuts.png");
+    addEventSelect(selected4, 3, "/static/deco/green6cuts.png");
+    addEventSelect(selected5, 4, "/static/deco/green6cuts.png");
+    addEventSelect(selected6, 5, "/static/deco/green6cuts.png");
+
+} else {
+    addEventSelect(selected1, 0, "/static/deco/green4cuts.png");
+    addEventSelect(selected2, 1, "/static/deco/green4cuts.png");
+    addEventSelect(selected3, 2, "/static/deco/green4cuts.png");
+    addEventSelect(selected4, 3, "/static/deco/green4cuts.png");
+}

@@ -7,56 +7,63 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <h1>Choose your pictures</h1>
-        <button id="pic1">
-            <img src="/static/temp-photos/photo_1.png" alt="Photo 1" width="120">
-        </button>
-        <button id="pic2">
-            <img src="/static/temp-photos/photo_2.png" alt="Photo 2" width="120">
-        </button>
-        <button id="pic3">
-            <img src="/static/temp-photos/photo_3.png" alt="Photo 3" width="120">
-        </button>
-        <button id="pic4">
-            <img src="/static/temp-photos/photo_4.png" alt="Photo 4" width="120">
-        </button>
-        <button id="pic5">
-            <img src="/static/temp-photos/photo_5.png" alt="Photo 5" width="120">
-        </button>
-        <button id="pic6">
-            <img src="/static/temp-photos/photo_6.png" alt="Photo 6" width="120">
-        </button>
-        <button id="pic7">
-            <img src="/static/temp-photos/photo_7.png" alt="Photo 7" width="120">
-        </button>
-        <button id="pic8">
-            <img src="/static/temp-photos/photo_8.png" alt="Photo 8" width="120">
-        </button> 
-        <button id="pic9">
-            <img src="/static/temp-photos/photo_9.png" alt="Photo 9" width="120">
-        </button> 
-        <button id="pic10">
-            <img src="/static/temp-photos/photo_10.png" alt="Photo 10" width="120">
-        </button> 
-        <button id="selected1">
-            <img src="/static/white/4cuts.png" width="120">
-        </button>
-        <button id="selected2">
-            <img src="/static/white/4cuts.png" width="120">
-        </button>
-        <button id="selected3">
-            <img src="/static/white/4cuts.png" width="120">
-        </button>
-        <button id="selected4">
-            <img src="/static/white/4cuts.png" width="120">
-        </button>
-        <button id="selected5">
-            <img src="/static/white/4cuts.png" width="120">
-        </button>
-        <button id="selected6">
-            <img src="/static/white/4cuts.png" width="120">
-        </button>
-        <script src="/static/choose_photo.js"></script>
-        <button onclick="window.location.href='/deco6cuts'">Done</button>
+        <div class="content" class="content-choose">
+            <p class="choose-heading">Choose your pictures</p>
+            <button id="pic1">
+                <img src="/static/temp-photos/photo_1.png" alt="Photo 1" width="120">
+            </button>
+            <button id="pic2">
+                <img src="/static/temp-photos/photo_2.png" alt="Photo 2" width="120">
+            </button>
+            <button id="pic3">
+                <img src="/static/temp-photos/photo_3.png" alt="Photo 3" width="120">
+            </button>
+            <button id="pic4">
+                <img src="/static/temp-photos/photo_4.png" alt="Photo 4" width="120">
+            </button>
+            <button id="pic5">
+                <img src="/static/temp-photos/photo_5.png" alt="Photo 5" width="120">
+            </button>
+            <button id="pic6">
+                <img src="/static/temp-photos/photo_6.png" alt="Photo 6" width="120">
+            </button>
+            <button id="pic7">
+                <img src="/static/temp-photos/photo_7.png" alt="Photo 7" width="120">
+            </button>
+            <button id="pic8">
+                <img src="/static/temp-photos/photo_8.png" alt="Photo 8" width="120">
+            </button> 
+            <button id="pic9">
+                <img src="/static/temp-photos/photo_9.png" alt="Photo 9" width="120">
+            </button> 
+            <button id="pic10">
+                <img src="/static/temp-photos/photo_10.png" alt="Photo 10" width="120">
+            </button> 
+            <button id="selected1">
+                <img src="/static/deco/green6cuts.png" width="120">
+            </button>
+            <button id="selected2">
+                <img src="/static/deco/green6cuts.png" width="120">
+            </button>
+            <button id="selected3">
+                <img src="/static/deco/green6cuts.png" width="120">
+            </button>
+            <button id="selected4">
+                <img src="/static/deco/green6cuts.png" width="120">
+            </button>
+            <button id="selected5">
+                <img src="/static/deco/green6cuts.png" width="120">
+            </button>
+            <button id="selected6">
+                <img src="/static/deco/green6cuts.png" width="120">
+            </button>
+            <script src="/static/choose_photo.js"></script>
+            <button onclick="window.location.href='/deco6cuts'">Done</button>
+        </div>
     </body>
+    <footer>
+        <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.
+            <a href="https://github.com/chucan1312/photobooth-project" target="_blank">View on Github</a>
+        </p>
+    </footer>
 </html>

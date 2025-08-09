@@ -6,12 +6,21 @@ h1 {
     color: #526056;
 }
 
-.home-page-title {
+.home-page-heading {
     font-family: "Playfair Display", serif;
     text-align: center;
     font-size: 70px;
     font-weight: bold;
     margin-top: 95px;
+    color: #526056;
+}
+
+.choose-heading {
+    font-family: "Playfair Display", serif;
+    text-align: left;
+    font-size: 70px;
+    font-weight: bold;
+    margin-left: 110px;
     color: #526056;
 }
 
@@ -50,7 +59,7 @@ button:hover {
     transform: scale(1.2);
 }
 
-.button-containter {
+.button-container {
     text-align: center;
     margin-top: -30px;
     padding-bottom: 40px;
@@ -85,7 +94,13 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0px;
+}
+
+.content-choose {
+    display: flex;
     padding-left: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
@@ -131,7 +146,7 @@ footer {
     height: 100%;
     background: white;
     opacity: 0;
-    transition: opacity 0.3s ease-out;
+    transition: opacity 0.2s ease-out;
     z-index: 2;
 }
 
@@ -146,4 +161,77 @@ footer {
 #count {
     padding-left: 45px;
     padding-right: -45px;
+}
+
+.photo-container {
+    position: relative;
+    padding-left: 25px;
+}
+
+.photobooth-container {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    bottom: 0px;
+    left: 50%;
+    right: 0px;
+}
+
+.photobooth-container-4 img {
+    position: absolute;
+    display: block;
+    width: 210px;
+    height: auto;
+    left: 300px;
+    top: 35px;
+}
+
+.fourcutsbutton {
+    position: absolute;
+    border: none;
+    width: 5px;
+    height: auto;
+    background: transparent;
+    left: 23.5px;
+}
+
+.fourcutsbutton img {
+    display: block;
+    width: 164px;
+}
+
+#selected1 {
+    top: 41px;
+}
+
+#selected2 {
+    top: 185.5px;
+}
+
+#selected3 {
+    top: 330px;
+}
+
+#selected4 {
+    top: 474.5px;
+}
+
+.fourcutsbutton:hover {
+    background-color: transparent;
+}
+
+.photobutton {
+    background-color: transparent;
+    padding: 5px;
+    size: auto;
+}
+
+.photobutton:hover {
+    background-color: #526056;
+}
+
+.done-button {
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
 }
