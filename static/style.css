@@ -165,7 +165,7 @@ footer {
 
 .photo-container {
     position: relative;
-    padding-left: 25px;
+    padding-left: 20px;
 }
 
 .photobooth-container {
@@ -177,6 +177,10 @@ footer {
     right: 0px;
 }
 
+.photobooth-container-6 {
+    left: 64%;
+}
+
 .photobooth-container-4 img {
     position: absolute;
     display: block;
@@ -184,6 +188,15 @@ footer {
     height: auto;
     left: 300px;
     top: 35px;
+}
+
+.photobooth-container-6 img {
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: auto;
+    left: 5px;
+    top: 40px;
 }
 
 .fourcutsbutton {
@@ -200,25 +213,74 @@ footer {
     width: 164px;
 }
 
-#selected1 {
+.fourcutsbutton#selected1 {
     top: 41px;
 }
 
-#selected2 {
+.fourcutsbutton#selected2 {
     top: 185.5px;
 }
 
-#selected3 {
+.fourcutsbutton#selected3 {
     top: 330px;
 }
 
-#selected4 {
+.fourcutsbutton#selected4 {
     top: 474.5px;
 }
 
 .fourcutsbutton:hover {
     background-color: transparent;
 }
+
+
+.sixcutsbutton {
+    position: absolute;
+    border: none;
+    width: 5px;
+    height: auto;
+    background: transparent;
+}
+
+.sixcutsbutton img {
+    display: block;
+    width: 178px;
+}
+
+.sixcutsbutton#selected1 {
+    top: 52.7px;
+    left: 17px;
+}
+
+.sixcutsbutton#selected2 {
+    top: 52.7px;
+    left: 204.5px;
+}
+
+.sixcutsbutton#selected3 {
+    top: 233.9px;
+    left: 17px;
+}
+
+.sixcutsbutton#selected4 {
+    top: 233.9px;
+    left: 204.5px;
+}
+
+.sixcutsbutton#selected5 {
+    top: 415.1px;
+    left: 17px;
+}
+
+.sixcutsbutton#selected6 {
+    top: 415.1px;
+    left: 204.5px;
+}
+
+.sixcutsbutton:hover {
+    background-color: transparent;
+}
+
 
 .photobutton {
     background-color: transparent;
