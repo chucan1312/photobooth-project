@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <div class="content">
+            <title>Download photobooth</title>        
+        </div>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="content content-download">
+            <p class="download-heading">Thank you for using the app!</p>
+            <h2>Click here to download your photobooth:</h2>
+            <button onclick="window.location.href='/download'">Download</button>
+        </div>
+    </body>
+    <footer>
+        <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.
+            <a href="https://github.com/chucan1312/photobooth-project" target="_blank">View on Github</a>
+        </p>
+    </footer>
+</html>

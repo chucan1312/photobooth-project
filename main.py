@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from flask import Flask, render_template, request, jsonify, session, redirect, url_for, send_from_directory
+from filter import apply_filter_and_frame
 import os, base64
 
 app = Flask(__name__)
@@ -56,7 +57,7 @@ def save_selection():
     session["slots"] = slots
 
     # Redirect to correct deco page
-    if cut_type == "6-cuts":
+    if cut_type == "6cuts":
         return redirect(url_for("deco6"))
     else:
         return redirect(url_for("deco4"))
@@ -69,6 +70,29 @@ def deco4():
 @app.route('/deco6cuts')
 def deco6():
     return render_template('deco6cuts.html', slots=session.get("slots", []))
+
+@app.route('/save_deco', methods=["POST"])
+def save_deco():
+    cut_type = request.form.get("cut-type")
+    frame = request.form.get("frame")
+    filter = request.form.get("filter")
+    
+    if cut_type == '4cuts':
+        slots = [request.form.get("slot1"), request.form.get("slot2"), request.form.get("slot3"), request.form.get("slot4")]
+    else:
+        slots = [request.form.get("slot1"), request.form.get("slot2"), request.form.get("slot3"),
+                 request.form.get("slot4"), request.form.get("slot5"), request.form.get("slot6")]
+        
+    apply_filter_and_frame(cut_type, frame,filter, slots)
+    return redirect(url_for("downloadmenu"))
+
+@app.route('/downloadmenu')
+def downloadmenu():
+    return render_template('download.html')
+
+@app.route('/download')
+def download():
+    return send_from_directory('static', 'photobooth.png', as_attachment=True)
 
 @app.route('/instruction')
 def instruction():

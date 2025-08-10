@@ -2,7 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Photobooth</title>        
+        <div class="content">
+            <title>Instruction</title>        
+        </div>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
+    <body>
+        <div class="content content-instruction">
+            <p class="download-heading">Photobooth Instruction</p>
+            <h2>1. Pick your frame of choice</h2>
+            <h2>2. When the camera is ready, the timer will start to roll</h2>
+            <h2>3. Pose between every taken pictures and choose between all of your photos</h2>
+            <h2>4. Choose your filter and frame, and download your photobooth once finished</h2>
+            <button class="done-button" onclick="window.location.href='/'">Return</button>
+        </div>
+    </body>
+    <footer>
+        <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.
+            <a href="https://github.com/chucan1312/photobooth-project" target="_blank">View on Github</a>
+        </p>
+    </footer>
 </html>

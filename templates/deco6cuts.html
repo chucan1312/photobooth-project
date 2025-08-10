@@ -9,67 +9,69 @@
 </head>
 
 <body>
-    <div class="content" class="content-choose">
-        <div class="photo-container">
-            <p class="choose-heading deco-heading">Frame and Filter</p>
-            <h2>Filter</h2>
+    <form id="decoForm" action="/save_deco" method="POST">
+        <div class="content" class="content-choose">
             <div class="photo-container">
-                <button class="framebutton" id="normal">
-                    <img src="/static/deco/normalbutton.png" alt="Normal">
-                </button>
-                <button class="framebutton" id="brighten">
-                    <img src="/static/deco/brightenfilterbutton.png" alt="Brighten">
-                </button>
-                <button class="framebutton" id="bnw">
-                    <img src="/static/deco/bnwfilterbutton.png" alt="Black & White">
-                </button>
+                <p class="choose-heading deco-heading">Frame and Filter</p>
+                <h2>Filter</h2>
+                <div class="photo-container">
+                    <button type="button" class="framebutton" id="normal">
+                        <img src="/static/deco/normalbutton.png" alt="Normal">
+                    </button>
+                    <button type="button" class="framebutton" id="brighten">
+                        <img src="/static/deco/brightenfilterbutton.png" alt="Brighten">
+                    </button>
+                    <button type="button" class="framebutton" id="bnw">
+                        <img src="/static/deco/bnwfilterbutton.png" alt="Black & White">
+                    </button>
+                </div>
+                <h2>Frame</h2>
+                <div class="photo-container">
+                    <button type="button" class="framebutton" id="black">
+                        <img src="/static/deco/blackbutton.png" alt="Black">
+                    </button>
+                    <button type="button" class="framebutton" id="white">
+                        <img src="/static/deco/whitebutton.png" alt="White">
+                    </button>
+                    <button type="button" class="framebutton" id="pink">
+                        <img src="/static/deco/pinkbutton.png" alt="Pink">
+                    </button>
+                </div>
+                <div class="photo-container">
+                    <button type="button" class="framebutton" id="blue">
+                        <img src="/static/deco/bluebutton.png" alt="Blue">
+                    </button>
+                    <button type="button" class="framebutton" id="cherry">
+                        <img src="/static/deco/cherrybutton.png" alt="Cherry">
+                    </button>
+                    <button type="button" class="framebutton" id="purple-ombre">
+                        <img src="/static/deco/purplebutton.png" alt="Purple Ombre">
+                    </button>
+                </div>
+                <div class="photobooth-container photobooth-container-6">
+                    <img class="frame" src="static/frame/6cuts/white-frame-6.png" alt="Frame">
+                    <img class="chosen-photo" id="chosen-photo1-6" src="{{ slots[0] }}">
+                    <img class="chosen-photo" id="chosen-photo2-6" src="{{ slots[1] }}">
+                    <img class="chosen-photo" id="chosen-photo3-6" src="{{ slots[2] }}">
+                    <img class="chosen-photo" id="chosen-photo4-6" src="{{ slots[3] }}">
+                    <img class="chosen-photo" id="chosen-photo5-6" src="{{ slots[4] }}">
+                    <img class="chosen-photo" id="chosen-photo6-6" src="{{ slots[5] }}">
+                </div>
             </div>
-            <h2>Frame</h2>
-            <div class="photo-container">
-                <button class="framebutton" id="black">
-                    <img src="/static/deco/blackbutton.png" alt="Black">
-                </button>
-                <button class="framebutton" id="white">
-                    <img src="/static/deco/whitebutton.png" alt="White">
-                </button>
-                <button class="framebutton" id="pink">
-                    <img src="/static/deco/pinkbutton.png" alt="Pink">
-                </button>
-            </div>
-            <div class="photo-container">
-                <button class="framebutton" id="blue">
-                    <img src="/static/deco/bluebutton.png" alt="Blue">
-                </button>
-                <button class="framebutton" id="cherry">
-                    <img src="/static/deco/cherrybutton.png" alt="Cherry">
-                </button>
-                <button class="framebutton" id="purple-ombre">
-                    <img src="/static/deco/purplebutton.png" alt="Purple Ombre">
-                </button>
-            </div>
-            <div class="photobooth-container photobooth-container-6">
-                <img class="frame" src="static/frame/6cuts/white-frame-6.png" alt="Frame">
-                <img class="chosen-photo" id="chosen-photo1-6" src="{{ slots[0] }}">
-                <img class="chosen-photo" id="chosen-photo2-6" src="{{ slots[1] }}">
-                <img class="chosen-photo" id="chosen-photo3-6" src="{{ slots[2] }}">
-                <img class="chosen-photo" id="chosen-photo4-6" src="{{ slots[3] }}">
-                <img class="chosen-photo" id="chosen-photo5-6" src="{{ slots[4] }}">
-                <img class="chosen-photo" id="chosen-photo6-6" src="{{ slots[5] }}">
-            </div>
+            <!-- FIX THIS -->
+            <input type="hidden" name="cut-type" value="6cuts" id="6cuts">
+            <input type="hidden" name="frame" id="frame-input">
+            <input type="hidden" name="filter" id="filter-input">
+            <input type="hidden" name="slot1" id="slot1" value="{{ slots [0] }}">
+            <input type="hidden" name="slot2" id="slot2" value="{{ slots [1] }}">
+            <input type="hidden" name="slot3" id="slot3" value="{{ slots [2] }}">
+            <input type="hidden" name="slot4" id="slot4" value="{{ slots [3] }}">
+            <input type="hidden" name="slot5" id="slot5" value="{{ slots [4] }}">
+            <input type="hidden" name="slot6" id="slot6" value="{{ slots [5] }}">
+            <button type="submit" class="done-button">Done</button>
         </div>
-        <!-- FIX THIS -->
-        <input type="hidden" name="cut-type" id="6-cuts">
-        <input type="hidden" name="frame" id="">
-        <input type="hidden" name="slot1" id="slot1">
-        <input type="hidden" name="slot2" id="slot2">
-        <input type="hidden" name="slot3" id="slot3">
-        <input type="hidden" name="slot4" id="slot4">
-        <input type="hidden" name="slot5" id="slot5">
-        <input type="hidden" name="slot6" id="slot6">
-        <button type="submit" class="done-button">Done</button>
-    </div>
-    <script src="/static/choose_frame.js"></script>
-    <script src="/static/choose_filter.js"></script>
+        <script src="/static/choose_frame.js"></script>
+    </form>
 </body>
 <footer>
     <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.

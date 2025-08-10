@@ -35,6 +35,15 @@ h2 {
     margin-bottom: 0px;
 }
 
+.download-heading {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    margin-top: -270px;
+    color: #526056;
+}
+
 button {
     background-color: #526056;
     color: white;
@@ -87,7 +96,7 @@ body {
     min-height: 100vh;
 }
 
-.content, form#chooseForm {
+.content, form {
     flex: 1;
     background-color: #aac0b0;
 }
@@ -110,6 +119,16 @@ body {
 .content-choose {
     display: flex;
     padding-left: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-download {
+    padding: 50px;
+}
+
+.content-instruction {
+    padding: 50px;
     align-items: center;
     justify-content: center;
 }
@@ -221,7 +240,7 @@ footer {
 
 .fourcutsbutton img, #chosen-photo1-4, #chosen-photo2-4, #chosen-photo3-4, #chosen-photo4-4 {
     display: block;
-    width: 164px;
+    width: 165px;
 }
 
 .fourcutsbutton#selected1{
@@ -255,7 +274,7 @@ footer {
 
 .sixcutsbutton img,#chosen-photo1-6, #chosen-photo2-6, #chosen-photo3-6, #chosen-photo4-6, #chosen-photo5-6, #chosen-photo6-6 {
     display: block;
-    width: 178px;
+    width: 179px;
 }
 
 .sixcutsbutton#selected1 {
@@ -363,12 +382,12 @@ footer {
 
 #chosen-photo1-6 {
     left: 29px;
-    top: 25.5px;
+    top: 25.7px;
 }
 
 #chosen-photo2-6 {
-    left: 216.5px;
-    top: 25.5px;
+    left: 217px;
+    top: 25.7px;
 }
 
 #chosen-photo3-6 {
@@ -377,7 +396,7 @@ footer {
 }
 
 #chosen-photo4-6 {
-    left: 216.5px;
+    left: 217px;
     top: 206.7px;
 }
 
@@ -387,6 +406,6 @@ footer {
 }
 
 #chosen-photo6-6 {
-    left: 216.5px;
+    left: 217px;
     top: 387.9px;
 }
