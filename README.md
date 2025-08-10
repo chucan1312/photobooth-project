@@ -46,13 +46,12 @@ A web application that allows users to take photos, apply filters, add frames, a
 ## 📁 Project Structure
 
 photobooth-project/
-│
-├── static/ # Static files: CSS, JS, images, frames
-├── templates/ # HTML templates
-├── filter.py # Image processing functions
-├── main.py # Flask app entry point
-├── requirements.txt # Python dependencies
-└── README.md # This file
+- static/ # Static files: CSS, JS, images, frames
+- templates/ # HTML templates
+- filter.py # Image processing functions
+- main.py # Flask app entry point
+- requirements.txt # Python dependencies
+- README.md # This file
 
 ## 📬 Author
 
