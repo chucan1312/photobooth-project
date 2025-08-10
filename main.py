@@ -1,9 +1,10 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 import os, base64
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static/temp-photos'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True) #create directories recursively
+app.secret_key = "ptb"
 
 @app.route('/')
 def index():
@@ -32,20 +33,42 @@ def save_photo():
 
 @app.route('/choose4cuts')
 def choose4():
+    slots = session.get("slots", [])
     return render_template('choose4cuts.html')
 
 @app.route('/choose6cuts')
 def choose6():
+    slots = session.get("slots", [])
     return render_template('choose6cuts.html')
+
+@app.route("/save_selection", methods=["POST"])
+def save_selection():
+    cut_type = request.form.get("cut-type")
+
+    # Dynamically get all slots from the form
+    slots = []
+    for i in range(1, 7):  
+        slot_val = request.form.get(f"slot{i}")
+        if slot_val:
+            slots.append(slot_val)
+
+    # Save in session so next page can use it
+    session["slots"] = slots
+
+    # Redirect to correct deco page
+    if cut_type == "6-cuts":
+        return redirect(url_for("deco6"))
+    else:
+        return redirect(url_for("deco4"))
+
 
 @app.route('/deco4cuts')
 def deco4():
-    return render_template('deco4cuts.html')
-
+    return render_template('deco4cuts.html', slots=session.get("slots", []))
 
 @app.route('/deco6cuts')
 def deco6():
-    return render_template('deco6cuts.html')
+    return render_template('deco6cuts.html', slots=session.get("slots", []))
 
 @app.route('/instruction')
 def instruction():

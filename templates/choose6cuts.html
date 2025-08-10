@@ -1,78 +1,90 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Choose</title>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Choose pictures</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <form id="chooseForm" action="/save_selection" method="POST">
         <div class="content" class="content-choose">
             <div class="photo-container">
                 <p class="choose-heading">Choose your pictures</p>
-                <div class ="photo-container">
-                    <button class="photobutton" id="pic1">
+                <div class="photo-container">
+                    <button type="button" class="photobutton" id="pic1">
                         <img src="/static/temp-photos/photo_1.png" alt="Photo 1" width="170">
                     </button>
-                    <button class="photobutton" id="pic2">
+                    <button type="button" class="photobutton" id="pic2">
                         <img src="/static/temp-photos/photo_2.png" alt="Photo 2" width="170">
                     </button>
-                    <button class="photobutton" id="pic3">
+                    <button type="button" class="photobutton" id="pic3">
                         <img src="/static/temp-photos/photo_3.png" alt="Photo 3" width="170">
                     </button>
-                    <button class="photobutton" id="pic4">
+                    <button type="button" class="photobutton" id="pic4">
                         <img src="/static/temp-photos/photo_4.png" alt="Photo 4" width="170">
                     </button>
-                    <button class="photobutton" id="pic5">
+                    <button type="button" class="photobutton" id="pic5">
                         <img src="/static/temp-photos/photo_5.png" alt="Photo 5" width="170">
                     </button>
                 </div>
                 <div class="photo-container">
-                    <button class="photobutton" id="pic6">
+                    <button type="button" class="photobutton" id="pic6">
                         <img src="/static/temp-photos/photo_6.png" alt="Photo 6" width="170">
-                    </button>        
-                    <button class="photobutton" id="pic7">
+                    </button>
+                    <button type="button" class="photobutton" id="pic7">
                         <img src="/static/temp-photos/photo_7.png" alt="Photo 7" width="170">
                     </button>
-                    <button class="photobutton" id="pic8">
+                    <button type="button" class="photobutton" id="pic8">
                         <img src="/static/temp-photos/photo_8.png" alt="Photo 8" width="170">
-                    </button>                 
-                    <button class="photobutton" id="pic9">
-                        <img src="/static/temp-photos/photo_6.png" alt="Photo 6" width="170">
-                    </button>        
-                    <button class="photobutton" id="pic10">
-                        <img src="/static/temp-photos/photo_7.png" alt="Photo 7" width="170">
+                    </button>
+                    <button type="button" class="photobutton" id="pic9">
+                        <img src="/static/temp-photos/photo_9.png" alt="Photo 6" width="170">
+                    </button>
+                    <button type="button" class="photobutton" id="pic10">
+                        <img src="/static/temp-photos/photo_10.png" alt="Photo 7" width="170">
                     </button>
                 </div>
             </div>
             <div class="photobooth-container photobooth-container-6">
-                <img src="static/frame/6cuts/white-frame-6.png" alt = "Frame">
-                <button class="sixcutsbutton" id="selected1">
+                <img src="static/frame/6cuts/white-frame-6.png" alt="Frame">
+                <button type="button" class="sixcutsbutton" id="selected1">
                     <img src="/static/deco/green6cuts.png">
                 </button>
-                <button class="sixcutsbutton" id="selected2">
+                <button type="button" class="sixcutsbutton" id="selected2">
                     <img src="/static/deco/green6cuts.png">
                 </button>
-                <button class="sixcutsbutton" id="selected3">
+                <button type="button" class="sixcutsbutton" id="selected3">
                     <img src="/static/deco/green6cuts.png">
                 </button>
-                <button class="sixcutsbutton" id="selected4">
+                <button type="button" class="sixcutsbutton" id="selected4">
                     <img src="/static/deco/green6cuts.png">
-                </button>    
-                <button class="sixcutsbutton" id="selected5">
+                </button>
+                <button type="button" class="sixcutsbutton" id="selected5">
                     <img src="/static/deco/green6cuts.png">
-                </button>    
-                <button class="sixcutsbutton" id="selected6">
+                </button>
+                <button type="button" class="sixcutsbutton" id="selected6">
                     <img src="/static/deco/green6cuts.png">
-                </button>    
+                </button>
+                <input type="hidden" name="cut-type" value="6-cuts" id="6-cuts">
+                <input type="hidden" name="slot1" id="slot1">
+                <input type="hidden" name="slot2" id="slot2">
+                <input type="hidden" name="slot3" id="slot3">
+                <input type="hidden" name="slot4" id="slot4">
+                <input type="hidden" name="slot5" id="slot5">
+                <input type="hidden" name="slot6" id="slot6">
+                <button type="submit" class="done-button">Done</button>
             </div>       
-            <script src="/static/choose_photo.js"></script>
-            <button class="done-button" onclick="window.location.href='/deco4cuts'">Done</button>
-        </div>
-    </body>
-    <footer>
-        <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.
-            <a href="https://github.com/chucan1312/photobooth-project" target="_blank">View on Github</a>
-        </p>
-    </footer>
+            <script src=" /static/choose_photo.js"></script>
+            </div>
+    </form>
+</body>
+<footer>
+    <p>&copy; 2025 Chuc An Trinh. Built for portfolio purposes.
+        <a href="https://github.com/chucan1312/photobooth-project" target="_blank">View on Github</a>
+    </p>
+</footer>
+
 </html>

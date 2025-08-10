@@ -6,6 +6,13 @@ h1 {
     color: #526056;
 }
 
+h2 {
+    font-family: "Playfair Display", serif;
+    color:#526056;
+    top: -100px;
+    bottom: -5px;
+}
+
 .home-page-heading {
     font-family: "Playfair Display", serif;
     text-align: center;
@@ -22,6 +29,10 @@ h1 {
     font-weight: bold;
     margin-left: 110px;
     color: #526056;
+}
+
+.deco-heading {
+    margin-bottom: 0px;
 }
 
 button {
@@ -76,7 +87,7 @@ body {
     min-height: 100vh;
 }
 
-.content {
+.content, form#chooseForm {
     flex: 1;
     background-color: #aac0b0;
 }
@@ -208,12 +219,12 @@ footer {
     left: 23.5px;
 }
 
-.fourcutsbutton img {
+.fourcutsbutton img, #chosen-photo1-4, #chosen-photo2-4, #chosen-photo3-4, #chosen-photo4-4 {
     display: block;
     width: 164px;
 }
 
-.fourcutsbutton#selected1 {
+.fourcutsbutton#selected1{
     top: 41px;
 }
 
@@ -242,7 +253,7 @@ footer {
     background: transparent;
 }
 
-.sixcutsbutton img {
+.sixcutsbutton img,#chosen-photo1-6, #chosen-photo2-6, #chosen-photo3-6, #chosen-photo4-6, #chosen-photo5-6, #chosen-photo6-6 {
     display: block;
     width: 178px;
 }
@@ -296,4 +307,86 @@ footer {
     position: absolute;
     right: 30px;
     bottom: 100px;
+}
+
+.framebutton {
+    background-color: transparent;
+    size: auto
+}
+
+.framebutton img {
+    width: 150px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.photobooth-container-4 img.frame {
+    position: absolute;
+    display: block;
+    width: 210px;
+    height: auto;
+    left: 300px;
+    top: -35px;
+    z-index: 10;
+}
+
+#chosen-photo1-4 {
+    left: 323.5px;
+    top: 5.1px;
+}
+
+#chosen-photo2-4 {
+    left: 323.5px;
+    top: 149.6px;
+}
+
+#chosen-photo3-4 {
+    left: 323.5px;
+    top: 294.1px;
+}
+
+#chosen-photo4-4 {
+    left: 323.5px;
+    top: 438.6px;
+}
+
+.photobooth-container-6 img.frame {
+    position: absolute;
+    display: block;
+    width: 400px;
+    height: auto;
+    left: 12px;
+    top: -28px;
+    z-index: 10;
+
+}
+
+#chosen-photo1-6 {
+    left: 29px;
+    top: 25.5px;
+}
+
+#chosen-photo2-6 {
+    left: 216.5px;
+    top: 25.5px;
+}
+
+#chosen-photo3-6 {
+    left: 29px;
+    top: 206.7px;
+}
+
+#chosen-photo4-6 {
+    left: 216.5px;
+    top: 206.7px;
+}
+
+#chosen-photo5-6 {
+    left: 29px;
+    top: 387.9px;
+}
+
+#chosen-photo6-6 {
+    left: 216.5px;
+    top: 387.9px;
 }

@@ -38,6 +38,7 @@ function getNextSlot() {
 
 selected_picture = [false, false, false, false, false, false, false, false, false, false];
 
+// Select picture
 function addEventPic(pic, num, source) {
     pic.addEventListener("click", () => {
         if (!selected_picture[num]) {
@@ -46,6 +47,7 @@ function addEventPic(pic, num, source) {
                 const img = slot.querySelector("img");
                 img.src = source;
                 selected_picture[num] = true;
+                document.getElementById(`slot${slots.indexOf(slot) + 1}`).value = source;
             }
         }
     })
@@ -73,6 +75,7 @@ function getSource(src) {
     } else return null;
 }
 
+// Unselect picture
 function addEventSelect(selected, num, white) {
     selected.addEventListener("click", () => {
         if (selected_slot[num]) {
@@ -82,6 +85,7 @@ function addEventSelect(selected, num, white) {
             img.src = white;
             selected_picture[location] = false;
             selected_slot[num] = false;
+            document.getElementById(`slot${num + 1}`).value = "";
         }
     })
 }
