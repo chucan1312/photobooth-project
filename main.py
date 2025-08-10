@@ -11,6 +11,10 @@ app.secret_key = "ptb"
 def index():
     return render_template('index.html')
 
+@app.route('/instruction')
+def instruction():
+    return render_template('instruction.html')
+
 @app.route('/frameselection')
 def frame():
     return render_template('frameselection.html')
@@ -93,10 +97,6 @@ def downloadmenu():
 @app.route('/download')
 def download():
     return send_from_directory('static', 'photobooth.png', as_attachment=True)
-
-@app.route('/instruction')
-def instruction():
-    return render_template('instruction.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
