@@ -3,12 +3,12 @@ h1 {
     text-align: center;
     font-size: 70px;
     font-weight: bold;
-    color: #526056;
+    color: #5b6b6e;
 }
 
 h2 {
     font-family: "Playfair Display", serif;
-    color:#526056;
+    color:#5b6b6e;
     top: -100px;
     bottom: -5px;
 }
@@ -19,7 +19,7 @@ h2 {
     font-size: 70px;
     font-weight: bold;
     margin-top: 95px;
-    color: #526056;
+    color: #5b6b6e;
 }
 
 .choose-heading {
@@ -28,7 +28,7 @@ h2 {
     font-size: 70px;
     font-weight: bold;
     margin-left: 110px;
-    color: #526056;
+    color: #5b6b6e;
 }
 
 .deco-heading {
@@ -41,11 +41,11 @@ h2 {
     font-size: 70px;
     font-weight: bold;
     margin-top: -270px;
-    color: #526056;
+    color: #5b6b6e;
 }
 
 button {
-    background-color: #526056;
+    background-color: #5b6b6e;
     color: white;
     border: none;
     text-align: center;
@@ -58,7 +58,7 @@ button {
 }
 
 button:hover {
-    background-color: #39403c;
+    background-color: #5b6b6e;
 }
 
 .frame-button {
@@ -98,7 +98,7 @@ body {
 
 .content, form {
     flex: 1;
-    background-color: #aac0b0;
+    background-color: #d2e2f3;
 }
 
 .content-home {
@@ -134,7 +134,7 @@ body {
 }
 
 footer {
-    background-color:#526056;
+    background-color:#5b6b6e;
     color: white;
     text-align: center;
 }
@@ -185,7 +185,7 @@ footer {
     font-family: "Playfair Display", serif;
     font-size: 90px;
     font-weight: bold;
-    color: #526056;
+    color: #5b6b6e;
 }
 
 #count {
@@ -319,7 +319,7 @@ footer {
 }
 
 .photobutton:hover {
-    background-color: #526056;
+    background-color: #5b6b6e;
 }
 
 .done-button {
