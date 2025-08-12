@@ -38,10 +38,10 @@ def apply_filter_and_frame(type, frame_path, filter, slots):
         images = [img.resize((new_width, new_height), Image.LANCZOS) for img in images]
         canvas.paste(images[0], (50,158))
         canvas.paste(images[1], (612,158))
-        canvas.paste(images[0], (50,700))
-        canvas.paste(images[1], (612,700))
-        canvas.paste(images[0], (50,1240))
-        canvas.paste(images[1], (612,1240))
+        canvas.paste(images[2], (50,700))
+        canvas.paste(images[3], (612,700))
+        canvas.paste(images[4], (50,1240))
+        canvas.paste(images[5], (612,1240))
 
     
     frame = Image.open(frame_abs_path).convert("RGBA")
